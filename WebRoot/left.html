@@ -1,0 +1,37 @@
+s<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<HEAD><TITLE>tree</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<SCRIPT src="js/MzTreeView10.js" type=text/javascript></SCRIPT>
+<STYLE type=text/css>
+A:link {
+	PADDING-LEFT: 3px; FONT-SIZE: 12px; COLOR: #000; TEXT-DECORATION: none
+}
+A:visited {
+	PADDING-LEFT: 3px; FONT-SIZE: 12px; COLOR: #000; TEXT-DECORATION: none
+}
+A:active {
+	PADDING-LEFT: 3px; FONT-SIZE: 12px; COLOR: #000; TEXT-DECORATION: none
+}
+A:hover {
+	PADDING-LEFT: 3px; FONT-SIZE: 12px; COLOR: #000; TEXT-DECORATION: none
+}
+</STYLE>
+
+</HEAD>
+<BODY>
+<DIV id=treeDiv style="WIDTH: 100%; HEIGHT: 100%"></DIV>
+<SCRIPT type=text/javascript>
+
+var tree = new MzTreeView("tree");
+tree.setIconPath("images/");
+
+	tree.nodes['-1_1'] = 'text:系统管理';	
+	tree.nodes['1_0001'] = "text:账号管理;url:index.html;";
+	tree.nodes['1_0002'] = "text:分公司详情;url:/Bysj/company?action=list;";
+	tree.nodes['1_0003'] = "text:可操作人员;url:e.html;";
+	
+	
+document.getElementById("treeDiv").innerHTML = tree.toString();
+</SCRIPT>
+</BODY></HTML>
